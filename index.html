@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mailon Brito: pedreiro, reformas e pintura em Guaíba</title>
+<meta name="description" content="Mailon Brito, pedreiro em Guaíba, RS: construção, reforma, alvenaria, pintura e telhados. Peça seu orçamento pelo WhatsApp.">
+<meta name="theme-color" content="#16324F">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --paper:#F2EFE7; --surface:#FBFAF6; --ink:#1F2328; --muted:#585C63; --line:#BDB8AC;
+  --tijolo:#C8402A; --bp:#16324F; --bp2:#1E4268; --bpline:#CFE3F5; --pencil:#F2C230; --err:#FFB4A8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--paper:#181A1E;--surface:#212429;--ink:#EEEBE3;--muted:#A5A8AE;--line:#3B3F46;--tijolo:#E9694F}
+}
+:root[data-theme="dark"]{--paper:#181A1E;--surface:#212429;--ink:#EEEBE3;--muted:#A5A8AE;--line:#3B3F46;--tijolo:#E9694F}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;font-weight:800;line-height:.95;margin:0;letter-spacing:.01em}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pencil);outline-offset:3px}
+.btn{display:inline-block;font:600 1rem/1 "IBM Plex Sans",sans-serif;background:var(--pencil);color:#1F2328;border:0;border-radius:3px;padding:1rem 1.6rem;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+.btn[hidden]{display:none}
+
+/* planta */
+.bp{background:var(--bp);color:#EAF3FB;background-image:linear-gradient(rgba(207,227,245,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(207,227,245,.08) 1px,transparent 1px);background-size:32px 32px}
+.hero{padding:3.5rem 0 3rem}
+.hero-grid{display:grid;gap:2rem;align-items:center}
+@media(min-width:820px){.hero-grid{grid-template-columns:1fr 1.05fr}}
+.who{margin:0 0 1rem;color:var(--pencil);font-weight:600}
+.hero h1{font-size:clamp(3rem,8vw,5.8rem)}
+.lead{max-width:30rem;font-size:1.2rem;margin:1.4rem 0 2rem;color:#D4E4F2}
+.plan{width:100%;height:auto;display:block}
+.plan *{fill:none;stroke:var(--bpline);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.plan .hl{stroke:var(--pencil)}
+.plan text{fill:var(--bpline);stroke:none;font:500 14px "IBM Plex Sans",sans-serif}
+.plan .d{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s ease-out forwards}
+.plan .d:nth-of-type(2n){animation-delay:.25s}.plan .d:nth-of-type(3n){animation-delay:.5s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.plan .lbl{opacity:0;animation:fade .6s 2.2s forwards}
+@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.plan .d{animation:none;stroke-dashoffset:0}.plan .lbl{animation:none;opacity:1}html{scroll-behavior:auto}}
+
+section{padding:4rem 0}
+section[hidden]{display:none}
+h2{font-size:clamp(2.2rem,6vw,3.6rem);margin-bottom:1.5rem}
+
+/* experiência: fita métrica */
+.tape{height:34px;margin:2rem 0 .6rem;border:2px solid var(--ink);background:#F2C230;position:relative;
+  background-image:repeating-linear-gradient(90deg,#1F2328 0 2px,transparent 2px 12px),repeating-linear-gradient(90deg,#1F2328 0 2px,transparent 2px 60px);
+  background-size:100% 40%,100% 70%;background-repeat:no-repeat;background-position:0 100%,0 100%}
+.marks{display:flex;justify-content:space-between;max-width:100%;font-weight:600}
+.exp{display:grid;gap:2rem}
+@media(min-width:820px){.exp{grid-template-columns:1.2fr 1fr}}
+.exp p{max-width:36rem;margin:0 0 1rem}
+.cota{margin:0;padding:0;list-style:none}
+.cota li{padding:1rem 0;border-bottom:2px dashed var(--line);display:flex;flex-wrap:wrap;gap:.25rem 1rem;align-items:baseline;min-width:0}
+.cota b{font:800 2.6rem/1 "Big Shoulders Display",sans-serif;min-width:6.5rem;max-width:100%;overflow-wrap:anywhere}
+.cota span{min-width:0}
+
+/* serviços */
+.sv{margin:0;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.sv li{display:grid;gap:.4rem .5rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:center}
+@media(min-width:760px){.sv li{grid-template-columns:minmax(0,13rem) minmax(0,1fr) auto}}
+.sv h3{font-size:1.7rem;overflow-wrap:anywhere;hyphens:auto}
+.sv p{margin:0;color:var(--muted)}
+.sv button{font:600 .95rem "IBM Plex Sans",sans-serif;background:none;color:var(--ink);border:2px solid var(--ink);border-radius:3px;padding:.55rem .9rem;cursor:pointer;justify-self:start}
+.sv button:hover{background:var(--ink);color:var(--paper)}
+
+blockquote{margin:0 0 2rem;max-width:42rem;font-size:1.25rem}
+blockquote footer{font-size:.95rem;color:var(--muted);margin-top:.4rem}
+.sel{display:flex;flex-wrap:wrap;gap:.6rem;margin:0;padding:0;list-style:none}
+.sel li{border:2px solid var(--ink);padding:.5rem .9rem;border-radius:3px;font-weight:500}
+.sel.big{gap:.75rem}
+.sel.big li{font-size:1.12rem;padding:.75rem 1.1rem;border-left:6px solid var(--tijolo)}
+
+/* ficha da obra */
+.ficha h2{color:#fff}
+.sheet{border:2px solid var(--bpline);background:rgba(10,30,52,.55);padding:1.25rem}
+@media(min-width:700px){.sheet{padding:2rem}}
+.grid{display:grid;gap:1.1rem}
+@media(min-width:700px){.grid.c2{grid-template-columns:1fr 1fr}.grid .full{grid-column:1/-1}}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,label.t{display:block;font-weight:600;margin-bottom:.4rem;padding:0}
+.opt{font-weight:400;opacity:.75}
+input[type=text],input[type=number],input[type=date],select,textarea{width:100%;font:inherit;color:#0E1D2D;background:#F4F9FD;border:2px solid transparent;border-radius:3px;padding:.7rem .8rem}
+textarea{min-height:8rem;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chip span{display:block;padding:.55rem .95rem;border:2px solid var(--bpline);border-radius:999px;font-weight:500}
+.chip input:checked+span{background:var(--pencil);border-color:var(--pencil);color:#1F2328}
+.chip input:focus-visible+span{outline:3px solid #fff;outline-offset:2px}
+.radios{display:flex;gap:1.2rem;flex-wrap:wrap}
+.radios label{display:flex;gap:.45rem;align-items:center}
+#erro{min-height:1.5rem;color:var(--err);font-weight:600;margin:1rem 0 0}
+.out{margin-top:1.5rem;border-top:2px dashed var(--bpline);padding-top:1.5rem}
+.out[hidden]{display:none}
+.out pre{white-space:pre-wrap;word-break:break-word;font:inherit;background:rgba(255,255,255,.08);padding:1rem;margin:0 0 1rem;border-left:4px solid var(--pencil)}
+.row{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.row span{opacity:.85}
+
+@media (max-width:1024px), (pointer:coarse){
+  .ficha .wrap{padding-right:1rem;padding-left:1rem}
+  .sheet{padding:1rem;background:#fff;color:#1F2328;border:2px solid var(--pencil);border-radius:10px;box-shadow:0 12px 28px rgba(0,0,0,.18)}
+  .sheet .grid{gap:.8rem}
+  .sheet .grid>div{min-width:0;padding:.85rem;background:#fff;border:1px solid #D8DEE3;border-radius:7px}
+  .sheet .grid>div.full{grid-column:1/-1}
+  .sheet legend,.sheet label.t{color:#16324F}
+  .sheet .opt{color:#585C63}
+  .sheet input[type=text],.sheet input[type=number],.sheet input[type=date],.sheet select,.sheet textarea{border:1px solid #AAB7C2;border-radius:5px;background:#fff}
+  .sheet input:focus-visible,.sheet select:focus-visible,.sheet textarea:focus-visible{outline:3px solid #C8402A;outline-offset:2px}
+  .sheet .chip span{background:#F6F8FA;border-color:#9BAAB7;color:#16324F}
+  .sheet .chip input:checked+span{background:#F2C230;border-color:#C8402A;color:#1F2328}
+  .sheet .radios input{accent-color:#C8402A}
+  #erro{color:#A52E22}
+  .sheet>button[type=submit]{width:100%;min-height:3.25rem;border-radius:6px}
+  .sheet .out{border-color:#AAB7C2}
+  .sheet .out pre{background:#E8EDF1;color:#1F2328;border-radius:5px}
+  .sheet .btn.ghost{color:#16324F;border-color:#16324F}
+}
+@media (min-width:520px) and (max-width:568px){
+  .sheet .grid.c2{grid-template-columns:1fr 1fr}
+}
+
+/* detalhes desenhados e cor tijolo */
+section:not(.bp) h2::after{content:"";display:block;width:4.5rem;height:6px;background:var(--tijolo);margin-top:.8rem}
+.deco{display:block;width:100%;height:auto;max-width:440px}
+.deco *{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.deco .t{stroke:var(--tijolo);stroke-width:2.5}
+.deco .fill{fill:var(--tijolo);stroke:var(--tijolo)}
+.deco text{fill:var(--muted);stroke:none;font:500 13px "IBM Plex Sans",sans-serif;opacity:0;transition:opacity .6s 1.6s}
+.deco .d{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s ease-out}
+.deco .d.s2{transition-delay:.35s}.deco .d.s3{transition-delay:.7s}
+.deco.on .d{stroke-dashoffset:0}
+.deco.on text{opacity:1}
+@media (prefers-reduced-motion:reduce){.deco .d{stroke-dashoffset:0;transition:none}.deco text{opacity:1;transition:none}}
+.cota b{color:var(--tijolo)}
+.marks span:last-child{color:var(--tijolo)}
+.side{display:grid;gap:2rem;align-content:start}
+.sv li{border-left:6px solid var(--tijolo);padding-left:1rem}
+.svgrid{display:grid;gap:2rem}
+@media(min-width:900px){.svgrid{grid-template-columns:20rem 1fr;gap:3rem}.svgrid>div:first-child{position:sticky;top:1.5rem;align-self:start}}
+.head{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:flex-end;justify-content:space-between;margin-bottom:1.5rem}
+.head h2{margin-bottom:0}
+.head .deco{max-width:300px;margin-left:auto}
+
+/* oficina: ferramentas */
+.oficina{background:#23272D;color:#EEEBE3}
+.oficina h2{color:#fff}
+.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem 1rem;margin:0;padding:0 0 1.2rem;list-style:none;border-bottom:8px solid #EEEBE3}
+@media(min-width:760px){.tools{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.tools{grid-template-columns:repeat(6,1fr)}}
+.tools li{text-align:center}
+.tools .deco{max-width:150px;margin:0 auto .5rem;transition:transform .25s ease;transform-origin:50% 90%}
+.tools li:hover .deco{transform:rotate(-6deg)}
+.tools span{font-weight:500}
+.oficina .deco *{stroke:#EEEBE3}
+.oficina .deco .t{stroke:var(--pencil)}
+@media (prefers-reduced-motion:reduce){.tools .deco{transition:none}.tools li:hover .deco{transform:none}}
+footer.end{padding:1.5rem 0 2rem;color:var(--muted);font-size:.92rem}
+.fl{display:flex;flex-wrap:wrap;gap:.4rem 1.5rem}
+</style>
+</head>
+<body>
+
+<header class="bp hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="who" id="who"></p>
+      <h1>Do alicerce<br>ao telhado.</h1>
+      <p class="lead">Alvenaria, reforma, pintura e cobertura com quem já coordenou obra de mais de 50 pessoas.</p>
+      <a class="btn" href="#orcamento">Descrever minha obra</a>
+    </div>
+    <svg class="plan" viewBox="0 0 600 430" role="img" aria-label="Desenho de uma casa em corte com medidas">
+      <path class="d" pathLength="1" d="M20 380H580"/>
+      <path class="d" pathLength="1" d="M110 380V190H430V380"/>
+      <path class="d hl" pathLength="1" d="M80 190L270 70L460 190Z"/>
+      <path class="d" pathLength="1" d="M170 380V270H230V380"/>
+      <path class="d" pathLength="1" d="M300 240H390V300H300Z"/>
+      <path class="d" pathLength="1" d="M345 240V300M300 270H390"/>
+      <path class="d" pathLength="1" d="M110 215H430M110 240H170M230 240H300M390 240H430M110 265H170M230 265H300M390 265H430"/>
+      <path class="d" pathLength="1" d="M110 400H430M110 392V408M430 392V408"/>
+      <path class="d" pathLength="1" d="M490 380V190M482 380H498M482 190H498"/>
+      <path class="d" pathLength="1" d="M520 190V70M512 190H528M512 70H528"/>
+      <text class="lbl" x="235" y="422">largura</text>
+      <text class="lbl" x="500" y="290">parede</text>
+      <text class="lbl" x="530" y="135">telhado</text>
+    </svg>
+  </div>
+</header>
+
+<main>
+<section id="experiencia">
+  <div class="wrap exp">
+    <div>
+      <h2>Dez anos dentro da obra</h2>
+      <p>Mais de dez anos trabalhando em obras e já coordenou mais de 50 pessoas no canteiro.</p>
+      <p>Se a obra é pequena ou grande, o primeiro passo é o mesmo: descrever a ideia na ficha abaixo.</p>
+      <div class="tape" aria-hidden="true"></div>
+      <div class="marks" aria-hidden="true"><span>1º ano</span><span>10º ano e contando</span></div>
+    </div>
+    <div class="side"><ul class="cota">
+      <li><b>10+</b><span>anos de experiência em obras</span></li>
+      <li><b>50+</b><span>pessoas já coordenadas no canteiro</span></li>
+      <li><b id="reg-n">&nbsp;</b><span id="reg-t">região de atendimento</span></li>
+    </ul>
+    <svg class="deco" viewBox="0 0 360 220" role="img" aria-label="Parede de tijolos sendo levantada com prumo">
+      <path class="d" pathLength="1" d="M12 200H348"/>
+      <path class="d s2" pathLength="1" d="M20 200V140M340 200V140M20 180H340M20 160H340M20 140H340M20 200H340"/>
+      <path class="d s2" pathLength="1" d="M60 180V200M100 180V200M140 180V200M180 180V200M220 180V200M260 180V200M300 180V200M40 160V180M80 160V180M120 160V180M160 160V180M200 160V180M240 160V180M280 160V180M320 160V180M60 140V160M100 140V160M140 140V160M180 140V160M220 140V160M260 140V160M300 140V160"/>
+      <path class="d s3 t" pathLength="1" d="M20 140V120H220V140M60 120V140M100 120V140M140 120V140M180 120V140"/>
+      <path class="d s3" pathLength="1" d="M276 20H324M300 20V108"/>
+      <path class="fill" d="M292 108H308L300 130Z"/>
+      <text x="238" y="112">prumo</text>
+      <text x="26" y="112">fiada nova</text>
+    </svg></div>
+  </div>
+</section>
+
+<section id="ferramentas" class="oficina">
+  <div class="wrap">
+    <h2>Ferramentas do ofício</h2>
+    <ul class="tools">
+      <li><svg class="deco" viewBox="0 0 160 100" role="img" aria-label="Desenho de colher de pedreiro"><path class="d " pathLength="1" d="M14 86L58 38L86 62Z"/><path class="d s2" pathLength="1" d="M72 50L100 34"/><path class="d s3 t" pathLength="1" d="M104 32L134 14L142 26L112 44Z"/></svg><span>Colher de pedreiro</span></li>
+      <li><svg class="deco" viewBox="0 0 160 100" role="img" aria-label="Desenho de furadeira"><path class="d " pathLength="1" d="M26 38H44V54H26Z"/><path class="d s2" pathLength="1" d="M44 32H120Q136 32 136 46Q136 60 120 60H44Z"/><path class="d s2" pathLength="1" d="M84 60L92 92H112L108 60M60 40V52M68 40V52M76 40V52"/><path class="d s3 t" pathLength="1" d="M6 46H26"/><path class="d s3 t" pathLength="1" d="M96 60V70"/></svg><span>Furadeira</span></li>
+      <li><svg class="deco" viewBox="0 0 160 100" role="img" aria-label="Desenho de martelo"><path class="d " pathLength="1" d="M30 18H100V38H30Z"/><path class="d s2" pathLength="1" d="M30 18Q12 20 8 34Q20 30 30 38"/><path class="d s3 t" pathLength="1" d="M58 38H72V92H58Z"/></svg><span>Martelo</span></li>
+      <li><svg class="deco" viewBox="0 0 160 100" role="img" aria-label="Desenho de trena"><path class="d " pathLength="1" d="M40 24H110Q120 24 120 34V76Q120 86 110 86H40Q30 86 30 76V34Q30 24 40 24Z"/><path class="d s2" pathLength="1" d="M75 39A16 16 0 1 0 75.1 39Z"/><path class="d s3 t" pathLength="1" d="M120 60H156V70H120M128 70V64M136 70V66M144 70V64M152 70V66"/></svg><span>Trena</span></li>
+      <li><svg class="deco" viewBox="0 0 160 100" role="img" aria-label="Desenho de rolo de pintura"><path class="d " pathLength="1" d="M20 20H110V44H20Z"/><path class="d s2" pathLength="1" d="M110 32H128V62H80V76"/><path class="d s3 t" pathLength="1" d="M74 76H86V98H74Z"/></svg><span>Rolo de pintura</span></li>
+      <li><svg class="deco" viewBox="0 0 160 100" role="img" aria-label="Desenho de desempenadeira"><path class="d " pathLength="1" d="M20 56H140V68H20Z"/><path class="d s2 t" pathLength="1" d="M70 56V42Q80 34 90 42V56"/><path class="d s3" pathLength="1" d="M30 62H130"/></svg><span>Desempenadeira</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="servicos" style="background:var(--surface)">
+  <div class="wrap svgrid">
+    <div>
+      <h2>Escolha o serviço</h2>
+      <svg class="deco" viewBox="0 0 360 250" role="img" aria-label="Estrutura de telhado em corte">
+        <path class="d" pathLength="1" d="M20 200H340M20 200L180 60L340 200"/>
+        <path class="d s2" pathLength="1" d="M180 60V200M100 200L180 130L260 200"/>
+        <path class="d s3 t" pathLength="1" d="M10 192L180 44L350 192"/>
+        <path class="d s3" pathLength="1" d="M20 226H340M20 218V234M340 218V234"/>
+        <text x="158" y="246">vão</text>
+        <text x="196" y="52">cumeeira</text>
+      </svg>
+    </div>
+    <ul class="sv" id="sv"></ul>
+  </div>
+</section>
+
+<section id="obras">
+  <div class="wrap">
+    <div class="head">
+      <h2>Obras do dia a dia</h2>
+      <svg class="deco" viewBox="0 0 300 70" role="img" aria-label="Nível de bolha">
+        <path class="d" pathLength="1" d="M16 15H284Q294 15 294 25V45Q294 55 284 55H16Q6 55 6 45V25Q6 15 16 15Z"/>
+        <path class="d s2" pathLength="1" d="M110 25H190Q200 25 200 35Q200 45 190 45H110Q100 45 100 35Q100 25 110 25Z M130 25V45M170 25V45"/>
+        <path class="d s3" pathLength="1" d="M45 35H46M255 35H256"/>
+        <circle class="fill" cx="150" cy="35" r="7"/>
+      </svg>
+    </div>
+    <ul class="sel big" id="obras-lista"></ul>
+  </div>
+</section>
+
+<section id="depoimentos" hidden style="background:var(--surface)">
+  <div class="wrap"><h2>Quem já contratou</h2><div id="dep"></div></div>
+</section>
+
+<section id="cursos" hidden>
+  <div class="wrap"><h2>Cursos e certificados</h2><ul class="sel" id="cur"></ul></div>
+</section>
+
+<section id="orcamento" class="bp ficha">
+  <div class="wrap">
+    <h2>Ficha da obra</h2>
+    <form class="sheet" id="ficha" novalidate>
+      <div class="grid c2">
+        <div class="full">
+          <fieldset>
+            <legend>O que você precisa? <span class="opt">(marque quantos quiser)</span></legend>
+            <div class="chips" id="chips"></div>
+          </fieldset>
+        </div>
+        <div class="full">
+          <label class="t" for="ideia">Conte a ideia <span class="opt">(o que quer fazer, como está hoje, o que te incomoda)</span></label>
+          <textarea id="ideia" maxlength="1200"></textarea>
+        </div>
+        <div>
+          <label class="t" for="nome">Seu nome</label>
+          <input type="text" id="nome" autocomplete="name" maxlength="80">
+        </div>
+        <div>
+          <label class="t" for="local">Bairro e cidade da obra</label>
+          <input type="text" id="local" autocomplete="address-level2" maxlength="100">
+        </div>
+        <div>
+          <label class="t" for="imovel">Tipo de imóvel</label>
+          <select id="imovel">
+            <option value="">Selecione</option><option>Casa</option><option>Apartamento</option><option>Comércio</option><option>Terreno</option><option>Sítio ou chácara</option>
+          </select>
+        </div>
+        <div>
+          <label class="t" for="m2">Tamanho aproximado em m² <span class="opt">(se souber)</span></label>
+          <input type="number" id="m2" min="1" max="100000" inputmode="numeric">
+        </div>
+        <div>
+          <label class="t" for="prazo">Quando quer começar</label>
+          <select id="prazo">
+            <option value="">Selecione</option><option>Urgente, o quanto antes</option><option>Neste mês</option><option>Em 1 a 3 meses</option><option>Ainda estou planejando</option>
+          </select>
+        </div>
+        <div>
+          <label class="t" for="material">Material</label>
+          <select id="material">
+            <option value="">Selecione</option><option>Eu compro</option><option>Quero que o pedreiro compre</option><option>A combinar</option>
+          </select>
+        </div>
+        <div>
+          <fieldset>
+            <legend>Já tem projeto ou planta?</legend>
+            <div class="radios">
+              <label><input type="radio" name="projeto" value="Sim"> Sim</label>
+              <label><input type="radio" name="projeto" value="Não"> Não</label>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <label class="t" for="data">Dia sugerido para visita <span class="opt">(opcional)</span></label>
+          <input type="date" id="data">
+        </div>
+        <div>
+          <label class="t" for="periodo">Período da visita</label>
+          <select id="periodo">
+            <option value="">Qualquer horário</option><option>Manhã</option><option>Tarde</option>
+          </select>
+        </div>
+      </div>
+      <p id="erro" role="alert" aria-live="assertive"></p>
+      <button type="submit" class="btn">Montar meu pedido</button>
+      <div class="out" id="out" hidden>
+        <pre id="msg"></pre>
+        <div class="row">
+          <a class="btn" id="wa" href="#orcamento" target="_blank" rel="noopener" hidden>Enviar pelo WhatsApp</a>
+          <button type="button" class="btn ghost" id="copiar">Copiar pedido</button>
+          <span id="copiado" role="status"></span>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="end">
+  <div class="wrap fl"><span id="f-nome"></span><span id="f-tel"></span><span id="f-insta"></span></div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ===== EDITE AQUI ===== */
+  var DADOS = {
+    nome: "Mailon Brito",        // ex: "João da Silva"
+    tel: "(51) 99626-3127",         // ex: "(51) 99999-9999"
+    whatsapp: "5551996263127",    // só números com DDI e DDD, ex: "5551999999999"
+    regioes: "Guaíba, RS",     // ex: "Charqueadas e região"
+    instagram: ""    // ex: "@joao.obras"
+  };
+  var SERVICOS = [
+    { nome: "Construção", det: "Casa, edícula, muro e ampliação." },
+    { nome: "Reforma", det: "Do banheiro à casa inteira." },
+    { nome: "Alvenaria", det: "Parede de vedação e estrutural." },
+    { nome: "Reboco e massa", det: "Emboço, reboco e massa corrida." },
+    { nome: "Pisos e revestimentos", det: "Porcelanato, cerâmica e azulejo." },
+    { nome: "Pintura", det: "Interna e externa." },
+    { nome: "Telhado", det: "Telhado novo, troca de telhas, calhas e goteiras." },
+    { nome: "Laje", det: "Laje de concreto e forro." },
+    { nome: "Impermeabilização", det: "Laje, caixa d'água, banheiro e umidade em parede." }
+  ];
+  var OBRAS = [         // tipos de obra: apague o que ele não faz e acrescente o que faz
+    "Banheiro novo ou reformado",
+    "Cozinha com piso e revestimento novos",
+    "Casa nova, do alicerce ao telhado",
+    "Ampliação: mais um quarto ou cômodo",
+    "Segundo andar com laje",
+    "Muro e calçada",
+    "Troca de telhado e calhas",
+    "Goteira e infiltração",
+    "Pintura da casa toda",
+    "Reboco e massa para pintar",
+    "Edícula e área de churrasqueira",
+    "Reforma de apartamento"
+  ];
+  var DEPOIMENTOS = [];   // ex: { texto: "...", autor: "Maria, Charqueadas" }
+  var CURSOS = [];        // ex: "SENAI: Pedreiro de Alvenaria"
+  /* ===== FIM ===== */
+
+  var $ = function (id) { return document.getElementById(id); };
+  var make = function (tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  };
+  var trim = function (v) { return String(v == null ? "" : v).replace(/\s+/g, " ").trim(); };
+  var num = String(DADOS.whatsapp || "").replace(/\D/g, "");
+  var hasWa = num.length >= 12;
+
+  /* cabeçalho e rodapé */
+  var nome = trim(DADOS.nome), regioes = trim(DADOS.regioes);
+  $("who").textContent = (nome || "Pedreiro e mestre de obras") + (regioes ? ", " + regioes : "");
+  if (nome) document.title = nome + ": pedreiro, reformas e pintura";
+  if (regioes) { $("reg-n").textContent = regioes; $("reg-t").textContent = "atendimento"; }
+  else { $("reg-n").parentNode.hidden = true; }
+  if (nome) $("f-nome").textContent = nome;
+  if (trim(DADOS.tel)) $("f-tel").textContent = trim(DADOS.tel);
+  if (trim(DADOS.instagram)) $("f-insta").textContent = trim(DADOS.instagram);
+
+  /* serviços e chips */
+  var chips = $("chips");
+  function addChip(valor) {
+    var l = make("label", "chip");
+    var i = make("input");
+    i.type = "checkbox"; i.name = "servico"; i.value = valor;
+    l.appendChild(i); l.appendChild(make("span", "", valor));
+    chips.appendChild(l);
+  }
+  var list = $("sv");
+  SERVICOS.forEach(function (s) {
+    var li = make("li");
+    li.appendChild(make("h3", "", s.nome));
+    li.appendChild(make("p", "", s.det));
+    var b = make("button", "", "Pedir este");
+    b.type = "button";
+    b.setAttribute("aria-label", "Pedir orçamento de " + s.nome);
+    b.addEventListener("click", function () {
+      var boxes = chips.querySelectorAll("input");
+      for (var k = 0; k < boxes.length; k++) if (boxes[k].value === s.nome) boxes[k].checked = true;
+      $("orcamento").scrollIntoView();
+      $("ideia").focus({ preventScroll: true });
+    });
+    li.appendChild(b);
+    list.appendChild(li);
+    addChip(s.nome);
+  });
+  addChip("Outro serviço");
+
+  /* obras do dia a dia */
+  OBRAS.forEach(function (o) { $("obras-lista").appendChild(make("li", "", o)); });
+  $("obras").hidden = !OBRAS.length;
+
+  /* depoimentos e cursos (só aparecem se houver conteúdo) */
+  if (DEPOIMENTOS.length) {
+    DEPOIMENTOS.forEach(function (t) {
+      var q = make("blockquote");
+      q.appendChild(make("p", "", t.texto || ""));
+      q.appendChild(make("footer", "", t.autor || ""));
+      $("dep").appendChild(q);
+    });
+    $("depoimentos").hidden = false;
+  }
+  if (CURSOS.length) {
+    CURSOS.forEach(function (c) { $("cur").appendChild(make("li", "", c)); });
+    $("cursos").hidden = false;
+  }
+
+  /* desenhos: animam uma vez ao aparecer na tela */
+  var decos = document.querySelectorAll(".deco");
+  var mostrar = function (d) { d.classList.add("on"); };
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (itens) {
+      itens.forEach(function (it) { if (it.isIntersecting) { mostrar(it.target); io.unobserve(it.target); } });
+    }, { threshold: 0.2 });
+    decos.forEach(function (d) { io.observe(d); });
+  } else { decos.forEach(mostrar); }
+
+  /* data mínima = hoje (horário local) */
+  var hoje = new Date();
+  var p2 = function (n) { return n < 10 ? "0" + n : "" + n; };
+  $("data").min = hoje.getFullYear() + "-" + p2(hoje.getMonth() + 1) + "-" + p2(hoje.getDate());
+
+  /* formulário */
+  var form = $("ficha");
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var erro = $("erro");
+    erro.textContent = "";
+    var servicos = [];
+    chips.querySelectorAll("input:checked").forEach(function (c) { servicos.push(c.value); });
+    var ideia = trim($("ideia").value);
+    var nomeCli = trim($("nome").value);
+    if (!servicos.length && !ideia) { erro.textContent = "Marque um serviço ou conte a ideia da obra."; return; }
+    if (!nomeCli) { erro.textContent = "Digite seu nome para o pedreiro saber com quem fala."; $("nome").focus(); return; }
+    var data = $("data").value;
+    if (data && data < $("data").min) { erro.textContent = "Escolha um dia de visita a partir de hoje."; $("data").focus(); return; }
+
+    var linhas = ["Olá! Quero um orçamento de obra.", ""];
+    var add = function (rot, val) { val = trim(val); if (val) linhas.push(rot + ": " + val); };
+    add("Nome", nomeCli);
+    add("Local da obra", $("local").value);
+    add("Serviços", servicos.join(", "));
+    add("Imóvel", $("imovel").value);
+    var m2 = trim($("m2").value);
+    if (m2 && /^\d+([.,]\d+)?$/.test(m2)) add("Tamanho", m2 + " m²");
+    add("Início desejado", $("prazo").value);
+    add("Material", $("material").value);
+    var pr = form.querySelector('input[name="projeto"]:checked');
+    if (pr) add("Projeto ou planta", pr.value);
+    if (data) {
+      var pt = data.split("-");
+      add("Visita sugerida", pt[2] + "/" + pt[1] + "/" + pt[0] + ($("periodo").value ? ", " + $("periodo").value.toLowerCase() : ""));
+    }
+    if (ideia) { linhas.push(""); linhas.push("Ideia: " + ideia); }
+    var texto = linhas.join("\n");
+
+    $("msg").textContent = texto;
+    $("out").hidden = false;
+    var wa = $("wa");
+    if (hasWa) {
+      wa.href = "https://wa.me/" + num + "?text=" + encodeURIComponent(texto);
+      wa.hidden = false;
+    } else {
+      wa.hidden = true;
+    }
+    $("copiado").textContent = "";
+    $("out").scrollIntoView({ block: "nearest" });
+  });
+
+  $("copiar").addEventListener("click", function () {
+    var texto = $("msg").textContent, aviso = $("copiado");
+    var fallback = function () {
+      try {
+        var r = document.createRange(); r.selectNodeContents($("msg"));
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        aviso.textContent = "Texto selecionado. Use copiar do seu aparelho.";
+      } catch (e) { aviso.textContent = "Selecione o texto acima para copiar."; }
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(function () { aviso.textContent = "Pedido copiado."; }, fallback);
+      } else { fallback(); }
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>

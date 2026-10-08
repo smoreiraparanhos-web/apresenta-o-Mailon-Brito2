@@ -1,0 +1,36 @@
+SITE DO MAILON BRITO - PEDREIRO EM GUAIBA, RS
+
+O site é uma página só: o arquivo index.html. Não precisa instalar nada.
+Para ver: dê dois cliques em index.html (abre no navegador, com internet
+para carregar as fontes).
+
+COMO EDITAR
+Abra o index.html no Bloco de Notas (ou em um editor como o VS Code) e
+procure por "EDITE AQUI". Ali ficam:
+- DADOS: nome, telefone, whatsapp, regioes e instagram.
+  O whatsapp vai só com números, com 55 e o DDD. Exemplo: 5551999999999
+  ATENÇÃO: no momento o número é de teste. Troque pelo do Mailon.
+- SERVICOS: lista de serviços (também aparece como opção na ficha).
+- OBRAS: tipos de obra. Apague o que ele não faz.
+- DEPOIMENTOS e CURSOS: ficam escondidos até você preencher.
+  Exemplo de depoimento: { texto: "...", autor: "Nome, cidade" }
+  Use só depoimentos verdadeiros e com a autorização de quem falou.
+
+Depois de editar, salve e abra o index.html de novo para conferir.
+Cuidado para não apagar aspas, vírgulas e colchetes.
+
+COMO COLOCAR NO AR (escolha um)
+1) Gratuito e simples: entre em netlify.com, crie uma conta e arraste
+   a pasta deste site para a área "Deploy manually". O site ganha um
+   endereço na hora.
+2) GitHub Pages: suba o index.html em um repositório e ative o Pages.
+3) Endereço próprio (ex.: mailonbrito.com.br): registre o domínio no
+   Registro.br e aponte para o serviço de hospedagem escolhido.
+
+COMO O PEDIDO FUNCIONA
+Não existe servidor. A ficha monta o pedido e abre o WhatsApp do número
+configurado com a mensagem pronta. Se o cliente estiver no computador sem
+WhatsApp, ele pode usar o botão "Copiar pedido".
+
+FOTOS: se for usar, coloque só fotos tiradas pelo Mailon, com autorização
+de quem aparece. Não use imagens da internet.
